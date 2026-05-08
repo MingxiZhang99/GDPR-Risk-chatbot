@@ -198,19 +198,3 @@ Chunk (stored as Qdrant point):
 - Web chat UI with dark sci-fi theme
 - PDF and plain text ingestion
 
-### ❌ Not Implemented (and why)
-- **Graph representation**: Would add Neo4j dependency and entity extraction complexity; not justified for a focused Q&A system within the time constraint
-- **Hybrid search (BM25 + vector)**: Qdrant supports keyword filtering but not full BM25; would require adding Elasticsearch, increasing infra complexity
-- **Re-ranking**: Would improve precision but adds latency and another model dependency (e.g., Cohere reranker)
-- **Streaming responses**: FastAPI supports SSE but adds client-side complexity; not critical for a backend API
-- **Auth**: Trivial to add (API key header middleware) but omitted to keep the focus on RAG quality
-- **Persistent storage**: Using in-memory Qdrant for simplicity; production would use file-based or server mode
-
-## AI Collaboration
-
-This project was built with AI assistance (Amazon Q Developer):
-- AI generated the initial structure and core logic
-- I reviewed and identified gaps against requirements (metadata, data model, filtering, docker-compose, README)
-- AI then filled those gaps based on my direction
-- The architecture decisions (Qdrant, chunk size, embedding model) were discussed and confirmed before implementation
-- AI assisted with expanding seed data, adding multi-dimensional risk scoring, and building the interactive UI
