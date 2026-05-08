@@ -1,0 +1,12 @@
+Article 33 - Notification of personal data breach
+
+1. In the case of a personal data breach, the controller shall notify the supervisory authority without undue delay and within 72 hours.
+
+2. The notification shall include:
+
+- nature of the breach
+- categories and number of data subjects affected
+- likely consequences
+- measures taken
+
+3. If notification is delayed, reasons must be provided.

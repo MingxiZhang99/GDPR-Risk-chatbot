@@ -1,0 +1,15 @@
+Article 6 - Lawfulness of processing
+
+1. Processing shall be lawful only if and to the extent that at least one of the following applies:
+
+(a) the data subject has given consent;
+
+(b) processing is necessary for the performance of a contract;
+
+(c) processing is necessary for compliance with a legal obligation;
+
+(d) processing is necessary in order to protect vital interests;
+
+(e) processing is necessary for the performance of a task carried out in the public interest;
+
+(f) processing is necessary for the purposes of legitimate interests pursued by the controller, except where overridden by the interests or rights of the data subject.

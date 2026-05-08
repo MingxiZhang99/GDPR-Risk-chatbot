@@ -1,0 +1,22 @@
+Articles 37-39 - Data Protection Officer (DPO)
+
+Article 37 - Designation of the DPO:
+The controller and processor shall designate a DPO where:
+(a) processing is carried out by a public authority or body;
+(b) core activities consist of processing operations which require regular and systematic monitoring of data subjects on a large scale;
+(c) core activities consist of processing on a large scale of special categories of data (Article 9) or data relating to criminal convictions.
+
+A group of undertakings may appoint a single DPO. The DPO shall be designated on the basis of professional qualities, expert knowledge of data protection law and practices.
+
+Article 38 - Position of the DPO:
+- The controller shall ensure the DPO is involved properly and in a timely manner in all issues relating to protection of personal data.
+- The DPO shall not receive any instructions regarding the exercise of their tasks.
+- The DPO shall not be dismissed or penalised for performing their tasks.
+- The DPO shall directly report to the highest management level.
+
+Article 39 - Tasks of the DPO:
+(a) inform and advise the controller/processor and employees on their obligations;
+(b) monitor compliance with GDPR and other data protection provisions;
+(c) provide advice on data protection impact assessments (Article 35);
+(d) cooperate with the supervisory authority;
+(e) act as the contact point for the supervisory authority on issues relating to processing.

@@ -1,0 +1,13 @@
+Article 32 - Security of processing
+
+1. The controller and processor shall implement appropriate security measures including:
+
+- pseudonymization and encryption
+- ability to ensure confidentiality, integrity, availability
+- ability to restore availability
+
+2. Security measures shall consider risks such as:
+
+- accidental or unlawful destruction
+- loss or alteration
+- unauthorized disclosure

@@ -1,0 +1,27 @@
+Article 9 - Processing of special categories of personal data
+
+1. Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data for uniquely identifying a person, data concerning health, or data concerning a person's sex life or sexual orientation shall be prohibited.
+
+2. Paragraph 1 shall not apply if one of the following applies:
+
+(a) the data subject has given explicit consent;
+
+(b) processing is necessary for employment, social security and social protection law;
+
+(c) processing is necessary to protect vital interests where the data subject is incapable of giving consent;
+
+(d) processing is carried out by a not-for-profit body with appropriate safeguards;
+
+(e) processing relates to personal data manifestly made public by the data subject;
+
+(f) processing is necessary for legal claims or court proceedings;
+
+(g) processing is necessary for reasons of substantial public interest;
+
+(h) processing is necessary for preventive or occupational medicine, medical diagnosis, or health/social care;
+
+(i) processing is necessary for public health purposes;
+
+(j) processing is necessary for archiving, scientific or historical research, or statistical purposes.
+
+3. Health data, genetic data, and biometric data require additional safeguards and explicit consent or specific legal basis for processing.

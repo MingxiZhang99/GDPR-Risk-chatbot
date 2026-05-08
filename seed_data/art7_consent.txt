@@ -1,0 +1,9 @@
+Article 7 - Conditions for consent
+
+1. Where processing is based on consent, the controller must be able to demonstrate that the data subject has consented.
+
+2. Consent must be presented in an intelligible and easily accessible form.
+
+3. The data subject shall have the right to withdraw consent at any time.
+
+4. When assessing consent, account shall be taken of whether performance of a contract is conditional on consent that is not necessary.

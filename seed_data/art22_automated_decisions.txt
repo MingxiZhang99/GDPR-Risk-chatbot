@@ -1,0 +1,15 @@
+Article 22 - Automated individual decision-making, including profiling
+
+1. The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
+
+2. Paragraph 1 shall not apply if the decision:
+
+(a) is necessary for entering into, or performance of, a contract;
+(b) is authorised by Union or Member State law with suitable safeguards;
+(c) is based on the data subject's explicit consent.
+
+3. In cases referred to in points (a) and (c), the controller shall implement suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, at least the right to obtain human intervention, to express his or her point of view and to contest the decision.
+
+4. Decisions referred to in paragraph 2 shall not be based on special categories of personal data (Article 9) unless explicit consent is given or substantial public interest applies, and suitable measures are in place.
+
+Profiling means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyse or predict aspects concerning that natural person's performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.

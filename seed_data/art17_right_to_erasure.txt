@@ -1,0 +1,9 @@
+Article 17 - Right to erasure (Right to be forgotten)
+
+1. The data subject shall have the right to obtain erasure of personal data where:
+
+- data is no longer necessary
+- consent is withdrawn
+- data has been unlawfully processed
+
+2. The controller shall take reasonable steps to inform other controllers processing the data.

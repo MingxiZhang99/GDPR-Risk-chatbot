@@ -1,0 +1,24 @@
+Article 4 - Definitions
+
+Key definitions under GDPR:
+
+(1) 'personal data' means any information relating to an identified or identifiable natural person ('data subject'); an identifiable natural person is one who can be identified, directly or indirectly, by reference to an identifier such as a name, identification number, location data, online identifier, or factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity.
+
+(2) 'processing' means any operation performed on personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, alignment, combination, restriction, erasure or destruction.
+
+(5) 'pseudonymisation' means the processing of personal data in such a manner that the data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and subject to technical and organisational measures.
+
+(7) 'controller' means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data.
+
+(8) 'processor' means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
+
+(11) 'consent' of the data subject means any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.
+
+(12) 'personal data breach' means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise processed.
+
+(4) 'profiling' means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyse or predict aspects concerning performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.
+
+Note on anonymisation vs pseudonymisation:
+- Anonymised data is NOT personal data under GDPR (the regulation does not apply)
+- Pseudonymised data IS still personal data under GDPR (the regulation applies)
+- True anonymisation is irreversible — if there is any reasonable means to re-identify, the data is only pseudonymised

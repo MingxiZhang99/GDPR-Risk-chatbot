@@ -1,0 +1,38 @@
+GDPR and Artificial Intelligence / Machine Learning - Guidance
+
+1. Legal basis for AI training data:
+- Using personal data to train AI models requires a valid legal basis under Article 6
+- Consent must be specific to the AI/ML purpose — general consent for "service improvement" is insufficient
+- Legitimate interest may apply but requires a balancing test (DPIA recommended)
+
+2. Transparency requirements for AI:
+- Article 13(2)(f) requires informing data subjects about the existence of automated decision-making, including profiling
+- Meaningful information about the logic involved must be provided
+- The significance and envisaged consequences must be communicated
+
+3. Data minimisation in AI:
+- Only data necessary for the specific AI purpose should be collected
+- Consider whether the AI objective can be achieved with less data or anonymised data
+- Synthetic data or federated learning may reduce GDPR compliance burden
+
+4. Rights of data subjects in AI context:
+- Right to explanation: data subjects can request meaningful information about automated decisions
+- Right to human intervention: Article 22 requires the ability to obtain human review
+- Right to contest: data subjects can challenge automated decisions
+- Right to erasure: extends to training data and potentially model weights if personal data is memorised
+
+5. Data Protection Impact Assessment for AI:
+- Required for large-scale profiling or systematic monitoring (Article 35)
+- Should assess: bias and discrimination risks, accuracy of predictions, impact on individuals
+- Must document: purpose, necessity, proportionality, risks, and mitigation measures
+
+6. AI-specific risks under GDPR:
+- Model memorisation: LLMs may memorise and reproduce personal data from training sets
+- Inference: AI may infer sensitive data (health, orientation) from non-sensitive inputs
+- Bias: discriminatory outcomes may violate fairness principle (Article 5(1)(a))
+- Purpose creep: using data collected for one purpose to train AI for another violates purpose limitation
+
+7. International considerations:
+- Training data sourced from EU residents is subject to GDPR regardless of where the AI company is located
+- Cloud-based AI services may involve international data transfers (Chapter V applies)
+- The EU AI Act (2024) introduces additional requirements that complement GDPR

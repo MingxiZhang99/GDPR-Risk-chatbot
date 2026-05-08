@@ -1,0 +1,24 @@
+Articles 44-49 - Transfers of personal data to third countries
+
+Article 44 - General principle for transfers:
+Any transfer of personal data to a third country or international organisation shall only take place if the controller and processor comply with the conditions laid down in Chapter V of GDPR.
+
+Article 45 - Adequacy decisions:
+A transfer may take place where the European Commission has decided that the third country ensures an adequate level of protection. Countries with adequacy decisions include: Japan, UK, South Korea, Canada (commercial), among others. The United States does NOT have a general adequacy decision (Privacy Shield was invalidated by Schrems II ruling in 2020). The EU-US Data Privacy Framework was adopted in 2023 but only covers certified US organizations.
+
+Article 46 - Appropriate safeguards:
+In the absence of an adequacy decision, transfers may take place subject to appropriate safeguards including:
+(a) Standard Contractual Clauses (SCCs) adopted by the Commission;
+(b) Binding Corporate Rules (BCRs);
+(c) Approved codes of conduct or certification mechanisms.
+
+Article 47 - Binding Corporate Rules:
+BCRs must be approved by the competent supervisory authority and must include: application of general data protection principles, rights of data subjects, accepted liability, and how information is provided to data subjects.
+
+Article 49 - Derogations:
+In the absence of adequacy decisions or appropriate safeguards, transfers may only take place if:
+(a) the data subject has explicitly consented after being informed of risks;
+(b) the transfer is necessary for a contract;
+(c) the transfer is necessary for important reasons of public interest;
+(d) the transfer is necessary for legal claims;
+(e) the transfer is necessary to protect vital interests.

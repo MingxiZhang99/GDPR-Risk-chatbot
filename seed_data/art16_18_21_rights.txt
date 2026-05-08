@@ -1,0 +1,21 @@
+Article 16 - Right to rectification
+
+The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement.
+
+Article 18 - Right to restriction of processing
+
+1. The data subject shall have the right to obtain restriction of processing where:
+(a) the accuracy of the personal data is contested by the data subject;
+(b) the processing is unlawful and the data subject opposes erasure;
+(c) the controller no longer needs the personal data but the data subject requires it for legal claims;
+(d) the data subject has objected to processing pending verification of legitimate grounds.
+
+2. Where processing has been restricted, such personal data shall only be processed with the data subject's consent or for legal claims, protection of rights, or reasons of important public interest.
+
+Article 21 - Right to object
+
+1. The data subject shall have the right to object at any time to processing of personal data based on legitimate interests (Article 6(1)(e) or (f)), including profiling. The controller shall no longer process the personal data unless demonstrating compelling legitimate grounds.
+
+2. Where personal data are processed for direct marketing purposes, the data subject shall have the right to object at any time. Where the data subject objects to processing for direct marketing, the personal data shall no longer be processed for such purposes.
+
+3. The right to object must be explicitly brought to the attention of the data subject at the latest at the time of first communication, presented clearly and separately from any other information.

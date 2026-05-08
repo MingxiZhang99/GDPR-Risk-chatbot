@@ -1,0 +1,22 @@
+Article 30 - Records of processing activities
+
+1. Each controller shall maintain a record of processing activities under its responsibility. That record shall contain:
+(a) the name and contact details of the controller and DPO;
+(b) the purposes of the processing;
+(c) a description of the categories of data subjects and categories of personal data;
+(d) the categories of recipients to whom personal data have been or will be disclosed;
+(e) transfers of personal data to a third country, including documentation of suitable safeguards;
+(f) where possible, the envisaged time limits for erasure of different categories of data;
+(g) where possible, a general description of technical and organisational security measures.
+
+2. Each processor shall maintain a record containing:
+(a) the name and contact details of the processor(s) and each controller on behalf of which the processor is acting;
+(b) the categories of processing carried out on behalf of each controller;
+(c) transfers to third countries;
+(d) a general description of technical and organisational security measures.
+
+3. Records shall be in writing, including in electronic form.
+
+4. The controller or processor shall make the record available to the supervisory authority on request.
+
+5. The obligations in paragraphs 1 and 2 shall not apply to an enterprise or organisation employing fewer than 250 persons unless the processing is likely to result in a risk to rights and freedoms, is not occasional, or includes special categories of data.

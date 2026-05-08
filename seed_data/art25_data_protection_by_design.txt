@@ -1,0 +1,9 @@
+Article 25 - Data protection by design and by default
+
+1. The controller shall implement appropriate technical and organizational measures.
+
+2. By default, only personal data necessary for each purpose shall be processed.
+
+3. Measures shall ensure that data is not made accessible without intervention.
+
+4. Principles of data minimization must be embedded into systems.

@@ -1,0 +1,31 @@
+Article 83 - General conditions for imposing administrative fines
+
+1. Each supervisory authority shall ensure that fines are effective, proportionate and dissuasive.
+
+2. Fines shall be imposed depending on the circumstances of each case, considering:
+(a) the nature, gravity and duration of the infringement;
+(b) the intentional or negligent character;
+(c) actions taken to mitigate damage;
+(d) degree of responsibility considering technical and organisational measures;
+(e) any previous infringements;
+(f) degree of cooperation with the supervisory authority;
+(g) categories of personal data affected;
+(h) how the infringement became known to the supervisory authority.
+
+3. Infringements of the following provisions shall be subject to fines up to EUR 10,000,000 or 2% of total worldwide annual turnover (whichever is higher):
+- obligations of the controller and processor (Articles 8, 11, 25-39, 42, 43);
+- obligations of certification bodies (Articles 42, 43);
+- obligations of monitoring bodies (Article 41).
+
+4. Infringements of the following provisions shall be subject to fines up to EUR 20,000,000 or 4% of total worldwide annual turnover (whichever is higher):
+- basic principles for processing including consent (Articles 5, 6, 7, 9);
+- data subjects' rights (Articles 12-22);
+- transfers to third countries (Articles 44-49);
+- non-compliance with an order by the supervisory authority.
+
+5. Notable GDPR fines include:
+- Amazon: EUR 746 million (2021) - targeted advertising without consent
+- Meta/Facebook: EUR 1.2 billion (2023) - illegal data transfers to US
+- Google: EUR 50 million (2019) - lack of transparency and valid consent
+- H&M: EUR 35 million (2020) - excessive employee surveillance
+- British Airways: EUR 22 million (2020) - data breach affecting 400,000 customers

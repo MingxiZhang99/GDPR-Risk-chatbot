@@ -1,0 +1,15 @@
+Article 13 - Information to be provided where personal data are collected
+
+1. The controller shall provide the data subject with:
+
+- identity and contact details of the controller
+- purposes of processing
+- legal basis
+- recipients of the data
+- retention period
+
+2. The controller shall also inform about:
+
+- rights of access, rectification, erasure
+- right to withdraw consent
+- right to lodge a complaint

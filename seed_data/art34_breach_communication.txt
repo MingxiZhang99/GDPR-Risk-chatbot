@@ -1,0 +1,13 @@
+Article 34 - Communication of a personal data breach to the data subject
+
+1. When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay.
+
+2. The communication shall describe in clear and plain language the nature of the personal data breach and contain at least:
+(a) the name and contact details of the data protection officer or other contact point;
+(b) a description of the likely consequences of the breach;
+(c) a description of the measures taken or proposed to address the breach, including measures to mitigate possible adverse effects.
+
+3. Communication to the data subject shall not be required if:
+(a) the controller has implemented appropriate technical and organisational protection measures (e.g., encryption) that render the data unintelligible;
+(b) the controller has taken subsequent measures ensuring the high risk is no longer likely to materialise;
+(c) it would involve disproportionate effort, in which case a public communication shall be made instead.

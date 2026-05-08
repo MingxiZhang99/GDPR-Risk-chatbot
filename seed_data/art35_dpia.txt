@@ -1,0 +1,22 @@
+Article 35 - Data protection impact assessment (DPIA)
+
+1. Where a type of processing, in particular using new technologies, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall carry out an assessment of the impact of the envisaged processing operations on the protection of personal data prior to the processing.
+
+2. A DPIA shall be required in particular where:
+
+(a) systematic and extensive evaluation of personal aspects relating to natural persons based on automated processing, including profiling, on which decisions are based that produce legal effects or similarly significantly affect the natural person;
+
+(b) processing on a large scale of special categories of data (Article 9) or personal data relating to criminal convictions;
+
+(c) systematic monitoring of a publicly accessible area on a large scale.
+
+3. The assessment shall contain at least:
+
+(a) a systematic description of the envisaged processing operations and purposes;
+(b) an assessment of the necessity and proportionality of the processing;
+(c) an assessment of the risks to the rights and freedoms of data subjects;
+(d) the measures envisaged to address the risks, including safeguards, security measures and mechanisms to ensure protection.
+
+4. The controller shall seek the advice of the data protection officer (DPO) where designated.
+
+5. Where the DPIA indicates high risk, the controller shall consult the supervisory authority prior to processing (Article 36).

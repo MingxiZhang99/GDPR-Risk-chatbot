@@ -1,0 +1,23 @@
+Article 28 - Processor
+
+1. Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures.
+
+2. Processing by a processor shall be governed by a contract or legal act that sets out:
+
+(a) the subject-matter and duration of the processing;
+(b) the nature and purpose of the processing;
+(c) the type of personal data and categories of data subjects;
+(d) the obligations and rights of the controller.
+
+3. The contract shall stipulate that the processor:
+
+(a) processes personal data only on documented instructions from the controller;
+(b) ensures that persons authorised to process have committed to confidentiality;
+(c) takes all measures required pursuant to Article 32 (security);
+(d) does not engage another processor without prior written authorisation of the controller;
+(e) assists the controller in responding to data subject requests;
+(f) assists the controller in ensuring compliance with Articles 32-36;
+(g) at the choice of the controller, deletes or returns all personal data after the end of services;
+(h) makes available all information necessary to demonstrate compliance and allows for audits.
+
+4. Where a processor engages another processor (sub-processor), the same data protection obligations shall be imposed by way of contract.
