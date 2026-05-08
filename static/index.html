@@ -7,24 +7,42 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', 'SF Pro', monospace; background: #1a1a2e; height: 100vh; display: flex; flex-direction: column; color: #e0e0e0; }
-header { background: linear-gradient(135deg, #2d1b69, #1a1a2e); color: #c4b5fd; padding: 16px 24px; font-size: 18px; font-weight: 600; border-bottom: 1px solid #7c3aed33; letter-spacing: 1px; }
+header { background: linear-gradient(135deg, #2d1b69, #1a1a2e); color: #c4b5fd; padding: 12px 24px; font-size: 18px; font-weight: 600; border-bottom: 1px solid #7c3aed33; letter-spacing: 1px; display: flex; justify-content: space-between; align-items: center; }
+.header-actions { display: flex; gap: 8px; }
+.header-btn { background: #7c3aed33; border: 1px solid #7c3aed55; color: #c4b5fd; padding: 6px 12px; border-radius: 6px; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+.header-btn:hover { background: #7c3aed55; }
 #chat { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
 .msg { max-width: 80%; padding: 12px 16px; border-radius: 12px; line-height: 1.6; font-size: 14px; white-space: pre-wrap; }
 .user { align-self: flex-end; background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #f5f3ff; border-bottom-right-radius: 4px; box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3); }
 .bot { align-self: flex-start; background: #2a2a40; color: #e2e0f0; border-bottom-left-radius: 4px; border: 1px solid #7c3aed22; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 .bot.risk-card { max-width: 90%; white-space: normal; }
+.bot.system-msg { max-width: 90%; background: #1e2a1e; border-color: #10b98133; font-size: 13px; }
 .sources { font-size: 12px; color: #a78bfa; margin-top: 8px; border-top: 1px solid #7c3aed33; padding-top: 8px; }
-#input-area { padding: 16px 24px; background: #16162a; border-top: 1px solid #7c3aed33; display: flex; gap: 12px; }
+#input-area { padding: 12px 24px; background: #16162a; border-top: 1px solid #7c3aed33; display: flex; gap: 8px; align-items: center; }
 #input { flex: 1; padding: 12px 16px; border: 1px solid #7c3aed44; border-radius: 24px; font-size: 14px; outline: none; background: #1e1e36; color: #e0e0e0; }
 #input:focus { border-color: #7c3aed; box-shadow: 0 0 8px rgba(124, 58, 237, 0.4); }
 #input::placeholder { color: #6b6b8a; }
 #send { background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white; border: none; border-radius: 24px; padding: 12px 24px; font-size: 14px; cursor: pointer; transition: all 0.2s; }
 #send:hover { box-shadow: 0 0 12px rgba(124, 58, 237, 0.6); }
 #send:disabled { background: #3a3a5c; cursor: not-allowed; box-shadow: none; }
+#file-btn { background: none; border: 1px solid #7c3aed44; color: #a78bfa; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
+#file-btn:hover { background: #7c3aed33; }
+#file-input { display: none; }
 .typing { align-self: flex-start; color: #a78bfa; font-style: italic; font-size: 14px; }
 #chat::-webkit-scrollbar { width: 6px; }
 #chat::-webkit-scrollbar-track { background: #1a1a2e; }
 #chat::-webkit-scrollbar-thumb { background: #7c3aed44; border-radius: 3px; }
+
+/* Modal */
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 100; align-items: center; justify-content: center; }
+.modal-overlay.active { display: flex; }
+.modal { background: #2a2a40; border: 1px solid #7c3aed33; border-radius: 12px; padding: 24px; width: 90%; max-width: 500px; }
+.modal h3 { color: #c4b5fd; margin-bottom: 16px; }
+.modal p { font-size: 13px; color: #aaa; margin-bottom: 12px; }
+.modal-close { float: right; background: none; border: none; color: #aaa; font-size: 20px; cursor: pointer; }
+.cmd-list { list-style: none; }
+.cmd-list li { padding: 8px 0; border-bottom: 1px solid #7c3aed11; font-size: 13px; }
+.cmd-list code { background: #1a1a2e; padding: 2px 6px; border-radius: 4px; color: #a78bfa; }
 
 /* Risk Dashboard Styles */
 .risk-dashboard { display: flex; flex-direction: column; gap: 12px; }
@@ -55,19 +73,60 @@ header { background: linear-gradient(135deg, #2d1b69, #1a1a2e); color: #c4b5fd; 
 </style>
 </head>
 <body>
-<header>⚡ GDPR Compliance Assistant</header>
+<header>
+  <span>⚡ GDPR Compliance Assistant</span>
+  <div class="header-actions">
+    <button class="header-btn" onclick="showHelp()">❓ Help</button>
+    <button class="header-btn" onclick="clearChat()">🗑️ Clear</button>
+  </div>
+</header>
+
 <div id="chat">
-  <div class="msg bot">Hi! I'm your GDPR compliance assistant. Ask me anything about GDPR, or type <b>/risk</b> followed by your project description to get a multi-dimensional risk assessment with scores.</div>
+  <div class="msg bot">Hi! I'm your GDPR compliance assistant. Here's what I can do:
+• Ask any GDPR question — I'll answer with sources
+• <b>/risk [description]</b> — Multi-dimensional risk assessment
+• <b>/search [query]</b> — Search the knowledge base
+• 📎 Upload PDF/TXT files to expand the knowledge base
+• Multi-turn conversation — I remember context</div>
 </div>
+
 <div id="input-area">
-  <input id="input" placeholder="Ask about GDPR or type /risk [project description]..." autocomplete="off">
+  <button id="file-btn" onclick="document.getElementById('file-input').click()">📎</button>
+  <input type="file" id="file-input" accept=".pdf,.txt" onchange="uploadFile(this)">
+  <input id="input" placeholder="Ask about GDPR, /risk [desc], /search [query]..." autocomplete="off">
   <button id="send">Send</button>
 </div>
+
+<!-- Help Modal -->
+<div class="modal-overlay" id="help-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="hideHelp()">✕</button>
+    <h3>⚡ Commands & Features</h3>
+    <ul class="cmd-list">
+      <li><code>/risk [description]</code> — Get a multi-dimensional GDPR risk score (1-10) with 8 dimensions</li>
+      <li><code>/search [query]</code> — Search the knowledge base semantically</li>
+      <li><code>/clear</code> — Clear conversation history</li>
+      <li><b>📎 Upload</b> — Click the clip icon to upload PDF or TXT files to the knowledge base</li>
+      <li><b>Multi-turn</b> — I remember your previous messages, so you can ask follow-up questions</li>
+      <li><b>Language</b> — Ask in any language and I'll respond in that language</li>
+    </ul>
+    <p style="margin-top:12px;font-size:11px;color:#666;">Click dimension scores in risk dashboard to see explanations.</p>
+  </div>
+</div>
+
 <script>
 const chat = document.getElementById('chat');
 const input = document.getElementById('input');
 const send = document.getElementById('send');
 let history = [];
+
+function showHelp() { document.getElementById('help-modal').classList.add('active'); }
+function hideHelp() { document.getElementById('help-modal').classList.remove('active'); }
+
+function clearChat() {
+  history = [];
+  chat.innerHTML = '<div class="msg bot">Conversation cleared. How can I help you?</div>';
+}
 
 function scoreColor(score) {
   if (score <= 3) return '#10b981';
@@ -89,6 +148,14 @@ function addMsg(text, cls, sourcesHtml) {
   chat.scrollTop = chat.scrollHeight;
 }
 
+function addHtmlMsg(html, cls) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + cls;
+  div.innerHTML = html;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
 function addRiskDashboard(analysis, sources) {
   const div = document.createElement('div');
   div.className = 'msg bot risk-card';
@@ -106,13 +173,11 @@ function addRiskDashboard(analysis, sources) {
 
   let html = '<div class="risk-dashboard">';
 
-  // Overall score
   html += `<div class="risk-overall">
     <div style="font-size:12px;color:#a78bfa;">OVERALL RISK SCORE</div>
     <div class="score" style="color:${scoreColor(analysis.overall_score)}">${analysis.overall_score}/10</div>
   </div>`;
 
-  // Dimensions grid
   html += '<div class="risk-dimensions">';
   for (const [key, val] of Object.entries(analysis.dimensions || {})) {
     const label = dimLabels[key] || key;
@@ -127,7 +192,6 @@ function addRiskDashboard(analysis, sources) {
   }
   html += '</div>';
 
-  // Risk list
   if (analysis.risks?.length) {
     html += '<div class="risk-list">';
     for (const r of analysis.risks) {
@@ -140,7 +204,6 @@ function addRiskDashboard(analysis, sources) {
     html += '</div>';
   }
 
-  // Top priorities
   if (analysis.top_priorities?.length) {
     html += '<div class="priorities"><div class="pri-title">🎯 Top Priorities</div><ol>';
     for (const p of analysis.top_priorities) {
@@ -151,7 +214,6 @@ function addRiskDashboard(analysis, sources) {
 
   html += '</div>';
 
-  // Sources
   if (sources?.length) {
     html += '<div class="sources">📚 Sources:<br>';
     html += sources.map(s => `📄 ${s.source} (chunk ${s.chunk_index})`).join('<br>');
@@ -163,9 +225,74 @@ function addRiskDashboard(analysis, sources) {
   chat.scrollTop = chat.scrollHeight;
 }
 
+async function uploadFile(input) {
+  const file = input.files[0];
+  if (!file) return;
+
+  addMsg(`📎 Uploading: ${file.name}`, 'user');
+
+  const typing = document.createElement('div');
+  typing.className = 'typing';
+  typing.textContent = '⟳ Processing file...';
+  chat.appendChild(typing);
+
+  try {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('metadata', JSON.stringify({topic: 'gdpr', type: 'uploaded'}));
+
+    const res = await fetch('/document', { method: 'POST', body: formData });
+    const data = await res.json();
+    typing.remove();
+    addHtmlMsg(`✅ File <b>${data.source}</b> uploaded successfully!<br>Stored as ${data.chunks_stored} chunks (ID: ${data.document_id.slice(0,8)}...)`, 'bot system-msg');
+  } catch (e) {
+    typing.remove();
+    addMsg('❌ Failed to upload file. Please try again.', 'bot');
+  }
+  input.value = '';
+}
+
+async function handleSearch(query) {
+  const typing = document.createElement('div');
+  typing.className = 'typing';
+  typing.textContent = '⟳ Searching...';
+  chat.appendChild(typing);
+
+  try {
+    const res = await fetch(`/search?q=${encodeURIComponent(query)}&top_k=5`);
+    const data = await res.json();
+    typing.remove();
+
+    if (!data.results?.length) {
+      addMsg('No results found.', 'bot');
+      return;
+    }
+
+    let html = `<b>🔍 Search results for "${query}":</b><br><br>`;
+    for (const r of data.results) {
+      html += `<div style="background:#1a1a2e;padding:8px;border-radius:6px;margin-bottom:6px;font-size:12px;">
+        <div style="color:#a78bfa;margin-bottom:4px;">📄 ${r.source} (chunk ${r.chunk_index}) — score: ${r.score.toFixed(3)}</div>
+        <div>${r.text.slice(0, 200)}${r.text.length > 200 ? '...' : ''}</div>
+      </div>`;
+    }
+    addHtmlMsg(html, 'bot');
+  } catch (e) {
+    typing.remove();
+    addMsg('❌ Search failed. Please try again.', 'bot');
+  }
+}
+
 async function sendMsg() {
   const q = input.value.trim();
   if (!q) return;
+
+  // Handle /clear command
+  if (q === '/clear') {
+    input.value = '';
+    clearChat();
+    return;
+  }
+
   addMsg(q, 'user');
   input.value = '';
   send.disabled = true;
@@ -177,21 +304,30 @@ async function sendMsg() {
   chat.scrollTop = chat.scrollHeight;
 
   try {
-    const isRisk = q.startsWith('/risk ');
-    let res;
-
-    if (isRisk) {
+    if (q.startsWith('/risk ')) {
+      typing.remove();
       const desc = q.slice(6);
-      res = await fetch('/risk', {
+      const t2 = document.createElement('div');
+      t2.className = 'typing';
+      t2.textContent = '⟳ Analyzing risks across 8 dimensions...';
+      chat.appendChild(t2);
+      chat.scrollTop = chat.scrollHeight;
+
+      const res = await fetch('/risk', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({project_description: desc})
       });
       const data = await res.json();
-      typing.remove();
+      t2.remove();
       addRiskDashboard(data.analysis, data.sources);
+
+    } else if (q.startsWith('/search ')) {
+      typing.remove();
+      await handleSearch(q.slice(8));
+
     } else {
-      res = await fetch('/chat', {
+      const res = await fetch('/chat', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({question: q, history: history})
@@ -216,6 +352,7 @@ async function sendMsg() {
 
 send.addEventListener('click', sendMsg);
 input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMsg(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') hideHelp(); });
 input.focus();
 </script>
 </body>

@@ -88,6 +88,13 @@ curl -X POST http://localhost:8000/risk \
   }'
 ```
 
+Or use the Web UI:
+```
+/risk We are building an AI chatbot that collects user email, browsing history, and location data to provide personalized recommendations. We store data indefinitely and share it with third-party advertisers.
+```
+
+![Risk Assessment Demo](sample.png)
+
 Returns structured JSON with:
 - **Overall risk score** (1-10)
 - **8 dimension scores** with explanations:
